@@ -7,7 +7,7 @@ mod cli;
 async fn main() -> Result<()> {
     color_eyre::install()?;
     let args = cli::parse();
-    let mut notes_server = NotesServer::new();
+    let mut notes_server = NotesServer::default();
 
     let listener = TcpListener::bind(format!("0.0.0.0:{}", args.port)).await?;
     println!("Listening at {}", listener.local_addr()?);

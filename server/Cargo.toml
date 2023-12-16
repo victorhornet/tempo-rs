@@ -1,0 +1,22 @@
+[package]
+name = "server"
+version = "0.1.0"
+edition = "2021"
+authors.workspace = true
+license.workspace = true
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+common = { version = "0.1.0", path = "../common" }
+tokio = { version = "1.35.0", features = [
+    "rt-multi-thread",
+    "macros",
+    "time",
+    "net",
+] }
+color-eyre = { workspace = true }
+clap = { version = "4.4.11", features = ["derive"] }
+
+[[bin]]
+name = "tempo-server"
+path = "src/main.rs"

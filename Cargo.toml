@@ -1,0 +1,12 @@
+[workspace]
+members = ["server", "client", "common"]
+resolver = "2"
+
+[workspace.package]
+authors = ["Victor Hornet"]
+license = "MIT"
+license-file = "LICENSE"
+readme = "README.md"
+
+[workspace.dependencies]
+color-eyre = "0.6.2"
